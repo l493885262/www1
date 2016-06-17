@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="resources/fancybox/fancybox.css">
+	<title>户型</title>
+</head>
+<body>
+<!-- head -->
+<div class="head">
+	<div class="wrap clearfix">
+		<h1 class="head-name fl"><a href="">宝能城</a></h1>
+		<div class="head-nav fr">
+			<a href="" class="active">开盘户型</a>
+			<a href="">沙盘图</a>
+			<a href="">查看楼盘信息</a>
+		</div>
+	</div>
+</div>
+<!-- /head -->
+<!-- floor-time -->
+<div class="floor-time wrap mt20">
+	<div class="floor-ta">
+		<h3>开盘楼号：<span>1#、2#</span></h3>
+		<p>开盘倒计时</p>
+		<ul class="floor-cou clearfix">
+			<li>
+				<div class="clearfix" id="day_show"></div>
+				<p>天</p>
+			</li>
+			<li>
+				<div class="clearfix" id="hour_show"></div>
+				<p>时</p>
+			</li>
+			<li>
+				<div class="clearfix" id="minute_show"></div>
+				<p>分</p>
+			</li>
+			<li>
+				<div class="clearfix" id="second_show"></div>
+				<p>秒</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /floor-time -->
+<!-- apar -->
+<div class="apar wrap mt30 bgf">
+	<ul class="clearfix">
+		<li>
+			<div class="apar-img"><a class="grouped_elements" href="http://img.berui.com/hefei/newhouse/upfile/borough/picture/20141210152906.jpg"><img src="http://img.berui.com/hefei/newhouse/upfile/borough/picture/20141210152906.jpg" alt=""></a></div>
+			<div class="apar-info"><h3>宝能城C地块B</h3><p>3室2厅1卫1阳台88㎡</p></div>
+		</li>
+		<li>
+			<div class="apar-img"><a class="grouped_elements" href="http://img.berui.com/hefei/newhouse/2016/06/20160605/BRBKD1465101749.jpg"><img src="http://img.berui.com/hefei/newhouse/2016/06/20160605/BRBKD1465101749.jpg" alt=""></a></div>
+			<div class="apar-info"><h3>宝能城C地块B</h3><p>3室2厅1卫1阳台88㎡</p></div>
+		</li>
+		<li>
+			<div class="apar-img"><a class="grouped_elements" href="images/img1.jpg"><img src="images/img1.jpg" alt=""></a></div>
+			<div class="apar-info"><h3>宝能城C地块B</h3><p>3室2厅1卫1阳台88㎡</p></div>
+		</li>
+		<li>
+			<div class="apar-img"><a class="grouped_elements" href="images/img1.jpg"><img src="images/img1.jpg" alt=""></a></div>
+			<div class="apar-info"><h3>宝能城C地块B</h3><p>3室2厅1卫1阳台88㎡</p></div>
+		</li>		
+		<li>
+			<div class="apar-img"><a class="grouped_elements" href="http://img.berui.com/hefei/newhouse/upfile/borough/picture/20150730090834.jpg"><img src="http://img.berui.com/hefei/newhouse/upfile/borough/picture/20150730090834.jpg" alt=""></a></div>
+			<div class="apar-info"><h3>宝能城C地块B</h3><p>3室2厅1卫1阳台88㎡</p></div>
+		</li>
+	</ul>
+</div>
+<!-- /apar -->
+<script src="js/jquery.min.js"></script>
+<script src="resources/fancybox/fancybox.js"></script>
+<script type="text/javascript">
+$(function(){
+	//弹出层
+	$(".grouped_elements").fancybox();
+	// $('.fancybox').fancybox();
+			$('.grouped_elements').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+				closeBtn  : true,
+				arrows    : true,
+				nextClick : true,
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+	//执行倒计时
+	updateEndTime();
+});
+//倒计时函数
+function updateEndTime()
+{
+var date = new Date();
+var time = date.getTime(); //当前时间距1970年1月1日之间的毫秒数
+var endDate ="2016-06-20 00:00:00" //结束时间字符串
+//转换为时间日期类型
+var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
+var endTime = endDate1.getTime(); //结束时间毫秒数
+var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数
+if(lag > 0)
+{
+var second = Math.floor(lag % 60); 
+var minite = Math.floor((lag / 60) % 60);
+var hour = Math.floor((lag / 3600) % 24);
+var day = Math.floor((lag / 3600) / 24);
+// if (day > 9) $('#day_show').addClass('ww1');
+if (day<10) {
+	$('#day_show').html('<span class="fl">0<em></em></span><span class="fr">'+day+'<em></em></span>');
+}else{
+	$('#day_show').html('<span class="fl"><em></em>'+Math.floor(day/10)+'</span><span class="fr">'+day%10+'<em></em></span>');
+};
+if (hour<10) {
+	$('#hour_show').html('<span class="fl">0<em></em></span><span class="fr">'+hour+'<em></em></span>');
+}else{
+	$('#hour_show').html('<span class="fl"><em></em>'+Math.floor(hour/10)+'</span><span class="fr">'+hour%10+'<em></em></span>');
+};
+if (minite<10) {
+	$('#minute_show').html('<span class="fl">0<em></em></span><span class="fr">'+minite+'<em></em></span>');
+}else{
+	$('#minute_show').html('<span class="fl"><em></em>'+Math.floor(minite/10)+'</span><span class="fr">'+minite%10+'<em></em></span>');
+};
+if (second<10) {
+	$('#second_show').html('<span class="fl">0<em></em></span><span class="fr">'+second+'<em></em></span>');
+}else{
+	$('#second_show').html('<span class="fl"><em></em>'+Math.floor(second/10)+'</span><span class="fr">'+second%10+'<em></em></span>');
+};
+}
+else{
+$('#day_show').html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+$("#hour_show").html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+$("#minute_show").html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+$("#second_show").html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+}
+setTimeout("updateEndTime()",1000);
+}
+</script>
+</body>
+</html>

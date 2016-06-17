@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/index.css">
+	<title>楼盘</title>
+</head>
+<body>
+<!-- head -->
+<div class="head">
+	<div class="wrap clearfix">
+		<h1 class="head-name fl"><a href="">宝能城</a></h1>
+		<div class="head-nav fr">
+			<a href="">我要抢购</a>
+			<a href="">开盘户型</a>
+			<a href="">沙盘图</a>
+			<a href="">查看楼盘信息</a>
+		</div>
+	</div>
+</div>
+<!-- /head -->
+<!-- floor-time -->
+<div class="floor-time wrap mt20">
+	<div class="floor-ta">
+		<h3>开盘楼号：<span>1#、2#</span></h3>
+		<p>开盘倒计时</p>
+		<ul class="floor-cou clearfix">
+			<li>
+				<div class="clearfix" id="day_show"></div>
+				<p>天</p>
+			</li>
+			<li>
+				<div class="clearfix" id="hour_show"></div>
+				<p>时</p>
+			</li>
+			<li>
+				<div class="clearfix" id="minute_show"></div>
+				<p>分</p>
+			</li>
+			<li>
+				<div class="clearfix" id="second_show"></div>
+				<p>秒</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /floor-time -->
+<!-- floor-main -->
+<div class="floor-nav clearfix">
+	<a class="al active" href="">1#</a>
+	<a href="">2#</a>
+	<a href="">3#</a>
+	<a class="ar" href="">4#</a>
+</div>
+<div class="floor-tit wrap bgf clearfix">
+	<h3>楼层</h3>
+	<div class="floor-zt">状态：<span class="thp1"></span><em>待售</em><span class="thp2"></span><em>已售</em></div>
+</div>
+<div class="floor-con wrap bgf clearfix">
+	<dl class="floor-fl">
+		<dd>33层</dd><dd>32层</dd><dd>31层</dd><dd>30层</dd><dd>29层</dd><dd>28层</dd><dd>27层</dd><dd>26层</dd><dd>25层</dd>
+		<dd>24层</dd><dd>23层</dd><dd>22层</dd><dd>21层</dd><dd>20层</dd><dd>19层</dd><dd>18层</dd><dd>17层</dd>
+		<dd>16层</dd><dd>15层</dd><dd>14层</dd><dd>13层</dd><dd>12层</dd><dd>11层</dd><dd>10层</dd><dd>9层</dd><dd>8层</dd>
+		<dd>7层</dd><dd>6层</dd><dd>5层</dd><dd>4层</dd><dd>3层</dd><dd>2层</dd><dd>1层</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3301</dd><dd class="dd1">3201</dd><dd class="dd1">3101</dd><dd class="dd1">3001</dd><dd class="dd1">2901</dd><dd class="dd1">2801</dd><dd class="dd1">2701</dd><dd class="dd1">2601</dd><dd class="dd1">2501</dd><dd class="dd1">2401</dd>
+		<dd class="dd1">2301</dd><dd class="dd1">2201</dd><dd class="dd1">2101</dd><dd class="dd1">2001</dd><dd class="dd1">1901</dd><dd class="dd1">1801</dd><dd class="dd1">1701</dd><dd class="dd1">1601</dd><dd class="dd1">1501</dd><dd class="dd1">1401</dd>
+		<dd class="dd1">1301</dd><dd class="dd1">1201</dd><dd class="dd1">1101</dd><dd class="dd1">1001</dd><dd class="dd1">901</dd><dd class="dd1">801</dd><dd class="dd1">701</dd><dd class="dd1">601</dd><dd class="dd1">501</dd><dd class="dd1">401</dd><dd class="dd1">301</dd>
+		<dd class="dd1">201</dd><dd class="dd1">101</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3302</dd><dd class="dd1">3202</dd><dd class="dd1">3102</dd><dd class="dd1">3002</dd><dd class="dd1">2902</dd><dd class="dd1">2802</dd><dd class="dd2">2702</dd><dd class="dd2">2602</dd><dd class="dd1">2502</dd><dd class="dd1">2402</dd>
+		<dd class="dd1">2302</dd><dd class="dd1">2202</dd><dd class="dd1">2102</dd><dd class="dd1">2002</dd><dd class="dd1">1902</dd><dd class="dd1">1802</dd><dd class="dd1">1702</dd><dd class="dd1">1602</dd><dd class="dd1">1502</dd><dd class="dd1">1402</dd>
+		<dd class="dd1">1302</dd><dd class="dd1">1202</dd><dd class="dd1">1102</dd><dd class="dd1">1002</dd><dd class="dd1">902</dd><dd class="dd1">802</dd><dd class="dd1">702</dd><dd class="dd1">602</dd><dd class="dd1">502</dd><dd class="dd1">402</dd><dd class="dd1">302</dd>
+		<dd class="dd1">202</dd><dd class="dd1">102</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3303</dd><dd class="dd1">3203</dd><dd class="dd1">3103</dd><dd class="dd1">3003</dd><dd class="dd1">2903</dd><dd class="dd1">2803</dd><dd class="dd1">2703</dd><dd class="dd1">2603</dd><dd class="dd1">2503</dd><dd class="dd1">2403</dd>
+		<dd class="dd1">2303</dd><dd class="dd1">2203</dd><dd class="dd1">2103</dd><dd class="dd1">2003</dd><dd class="dd1">1903</dd><dd class="dd1">1803</dd><dd class="dd1">1703</dd><dd class="dd1">1603</dd><dd class="dd1">1503</dd><dd class="dd1">1403</dd>
+		<dd class="dd1">1303</dd><dd class="dd1">1203</dd><dd class="dd1">1103</dd><dd class="dd1">1003</dd><dd class="dd1">903</dd><dd class="dd1">803</dd><dd class="dd1">703</dd><dd class="dd1">603</dd><dd class="dd1">503</dd><dd class="dd1">403</dd><dd class="dd1">303</dd>
+		<dd class="dd1">203</dd><dd class="dd1">103</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3304</dd><dd class="dd1">3204</dd><dd class="dd1">3104</dd><dd class="dd1">3004</dd><dd class="dd1">2904</dd><dd class="dd1">2804</dd><dd class="dd1">2704</dd><dd class="dd1">2604</dd><dd class="dd1">2504</dd><dd class="dd1">2404</dd>
+		<dd class="dd1">2304</dd><dd class="dd1">2204</dd><dd class="dd1">2104</dd><dd class="dd1">2004</dd><dd class="dd1">1904</dd><dd class="dd1">1804</dd><dd class="dd1">1704</dd><dd class="dd1">1604</dd><dd class="dd1">1504</dd><dd class="dd1">1404</dd>
+		<dd class="dd1">1304</dd><dd class="dd1">1204</dd><dd class="dd1">1104</dd><dd class="dd1">1004</dd><dd class="dd1">904</dd><dd class="dd1">804</dd><dd class="dd1">704</dd><dd class="dd1">604</dd><dd class="dd1">504</dd><dd class="dd1">404</dd><dd class="dd1">304</dd>
+		<dd class="dd1">204</dd><dd class="dd1">104</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3305</dd><dd class="dd1">3205</dd><dd class="dd1">3105</dd><dd class="dd1">3005</dd><dd class="dd1">2905</dd><dd class="dd1">2805</dd><dd class="dd1">2705</dd><dd class="dd1">2605</dd><dd class="dd1">2505</dd><dd class="dd1">2405</dd>
+		<dd class="dd1">2305</dd><dd class="dd1">2205</dd><dd class="dd1">2105</dd><dd class="dd1">2005</dd><dd class="dd1">1905</dd><dd class="dd1">1805</dd><dd class="dd1">1705</dd><dd class="dd1">1605</dd><dd class="dd1">1505</dd><dd class="dd1">1405</dd>
+		<dd class="dd1">1305</dd><dd class="dd1">1205</dd><dd class="dd1">1105</dd><dd class="dd1">1005</dd><dd class="dd1">905</dd><dd class="dd1">805</dd><dd class="dd1">705</dd><dd class="dd1">605</dd><dd class="dd1">505</dd><dd class="dd1">405</dd><dd class="dd1">305</dd>
+		<dd class="dd1">205</dd><dd class="dd1">105</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3306</dd><dd class="dd1">3206</dd><dd class="dd1">3106</dd><dd class="dd1">3006</dd><dd class="dd1">2906</dd><dd class="dd1">2806</dd><dd class="dd1">2706</dd><dd class="dd1">2606</dd><dd class="dd1">2506</dd><dd class="dd1">2406</dd>
+		<dd class="dd1">2306</dd><dd class="dd1">2206</dd><dd class="dd1">2106</dd><dd class="dd1">2006</dd><dd class="dd1">1906</dd><dd class="dd1">1806</dd><dd class="dd1">1706</dd><dd class="dd1">1606</dd><dd class="dd1">1506</dd><dd class="dd1">1406</dd>
+		<dd class="dd1">1306</dd><dd class="dd1">1206</dd><dd class="dd1">1106</dd><dd class="dd1">1006</dd><dd class="dd1">906</dd><dd class="dd1">806</dd><dd class="dd1">706</dd><dd class="dd1">606</dd><dd class="dd1">506</dd><dd class="dd1">406</dd><dd class="dd1">306</dd>
+		<dd class="dd1">206</dd><dd class="dd1">106</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3307</dd><dd class="dd1">3207</dd><dd class="dd1">3107</dd><dd class="dd1">3007</dd><dd class="dd1">2907</dd><dd class="dd1">2807</dd><dd class="dd1">2707</dd><dd class="dd1">2607</dd><dd class="dd1">2507</dd><dd class="dd1">2407</dd>
+		<dd class="dd1">2307</dd><dd class="dd1">2207</dd><dd class="dd1">2107</dd><dd class="dd1">2007</dd><dd class="dd1">1907</dd><dd class="dd1">1807</dd><dd class="dd1">1707</dd><dd class="dd1">1607</dd><dd class="dd1">1507</dd><dd class="dd1">1407</dd>
+		<dd class="dd1">1307</dd><dd class="dd1">1207</dd><dd class="dd1">1107</dd><dd class="dd1">1007</dd><dd class="dd1">907</dd><dd class="dd1">807</dd><dd class="dd1">707</dd><dd class="dd1">607</dd><dd class="dd1">507</dd><dd class="dd1">407</dd><dd class="dd1">307</dd>
+		<dd class="dd1">207</dd><dd class="dd1">107</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd class="dd1">3308</dd><dd class="dd1">3208</dd><dd class="dd1">3108</dd><dd class="dd1">3008</dd><dd class="dd1">2908</dd><dd class="dd1">2808</dd><dd class="dd1">2708</dd><dd class="dd1">2608</dd><dd class="dd1">2508</dd><dd class="dd1">2408</dd>
+		<dd class="dd1">2308</dd><dd class="dd1">2208</dd><dd class="dd1">2108</dd><dd class="dd1">2008</dd><dd class="dd1">1908</dd><dd class="dd1">1808</dd><dd class="dd1">1708</dd><dd class="dd1">1608</dd><dd class="dd1">1508</dd><dd class="dd1">1408</dd>
+		<dd class="dd1">1308</dd><dd class="dd1">1208</dd><dd class="dd1">1108</dd><dd class="dd1">1008</dd><dd class="dd1">908</dd><dd class="dd1">808</dd><dd class="dd1">708</dd><dd class="dd1">608</dd><dd class="dd1">508</dd><dd class="dd1">408</dd><dd class="dd1">308</dd>
+		<dd class="dd1">208</dd><dd class="dd1">108</dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd>
+	</dl>
+	<dl class="floor-fl">
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd>
+	</dl>
+	<dl class="floor-fl brr">
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+		<dd></dd><dd></dd>
+	</dl>
+</div>
+<!-- /floor-main -->
+<!-- popup satar -->
+<div class="pop pop1">
+	<span class="close">×</span>
+	<div class="pop-head"><h3>房源信息</h3></div>
+	<div class="pop-info fo1">
+		<p><span>单价：</span>8000元/㎡</p>
+		<p><span>总价：</span>88.12万元</p>
+		<p><span>面积：</span>88㎡</p>
+	</div>
+	<div class="pop-btn"><span class="btn btn-fo1">立即抢购</span></div>
+</div>
+<div class="pop pop2">
+	<span class="close">×</span>
+	<div class="pop-info fo2 tc">
+		<p>该房源已被抢购，快去看看其他房源吧！</p>
+	</div>
+	<div class="pop-btn"><span class="btn btn-fo2 layui-layer-close">去抢购</span></div>
+</div>
+<div class="pop pop3">
+	<span class="close">×</span>
+	<div class="pop-info fo3 tc">
+		<p>恭喜您成功抢购宝能城1#1001号房源！</p>
+		<p>请在<span>3个</span>工作日内</p>
+		<p>带好相关证件到售楼处签订认购合同!</p>
+	</div>
+	<div class="pop-btn"><span class="btn btn-fo2"><a href="floor-my.html">查看详情</a></span></div>
+</div>
+<div class="tcxf">
+	<p class="tcsj">
+		<span class="tc-img">抢购还剩：</span>
+		<span class="tc-day"></span>
+		<span class="tc-hour"></span>
+		<span class="tc-minite"></span>
+		<span class="tc-second"></span>
+	</p>
+</div>
+<!-- popup end -->
+<script src="js/jquery.min.js"></script>
+<script src="resources/layer/layer.js"></script>
+<script type="text/javascript">
+$(function() {
+	//弹出层
+	function tcc(nage) {
+		layer.open({
+		  type: 1,
+		  title: false,
+		  // shadeClose: true,
+		  content: nage
+		});
+	}
+	$(".dd1").click(function() {
+		tcc( $(".pop1"))
+	});
+	$(".dd2").click(function() {
+		tcc( $(".pop2"))
+	});
+	//
+	$(".close").on('click', function(event) {
+		layer.closeAll();
+		clearInterval(qqq);
+		$(".btn-fo1").html("立即抢购");
+	});
+	//
+	function dsq () {
+		qqq = setInterval(function () {
+			if ($(".aaa").text().length<3) {
+				$(".aaa").append('.');
+			}else{
+				$(".aaa").html("");
+			};	
+		},1000);
+	}
+	$(".btn-fo1").click(function() {
+		dsq();
+		$(this).html("结果确认中<i class='aaa'></i>");
+		setTimeout(function() {
+		if (parseInt(10*Math.random())%2==0) {
+			//抢购成功
+			layer.closeAll();
+			tcc( $(".pop3"))
+		}else{
+			//已购买过
+			$(".btn-fo1").removeClass('btn-fo1').addClass('btn-fo3').html("最多抢购1套").unbind("click");
+		};
+		},5000)
+		
+	});
+	//执行倒计时
+	updateEndTime();
+});
+//倒计时函数
+function updateEndTime()
+{
+var date = new Date();
+var time = date.getTime(); //当前时间距1970年1月1日之间的毫秒数
+var endDate ="2016-06-20 00:00:00" //结束时间字符串
+//转换为时间日期类型
+var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');
+var endTime = endDate1.getTime(); //结束时间毫秒数
+var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数
+if(lag > 0)
+{
+var second = Math.floor(lag % 60); 
+var minite = Math.floor((lag / 60) % 60);
+var hour = Math.floor((lag / 3600) % 24);
+var day = Math.floor((lag / 3600) / 24);
+// if (day > 9) $('#day_show').addClass('ww1');
+if (day<10) {
+	$('#day_show').html('<span class="fl">0<em></em></span><span class="fr">'+day+'<em></em></span>');
+	$(".tc-day").html("0"+day+"天");
+}else{
+	$('#day_show').html('<span class="fl"><em></em>'+Math.floor(day/10)+'</span><span class="fr">'+day%10+'<em></em></span>');
+	$(".tc-day").html(day+"天");
+};
+if (hour<10) {
+	$('#hour_show').html('<span class="fl">0<em></em></span><span class="fr">'+hour+'<em></em></span>');
+	$(".tc-hour").html("0"+hour+"时");
+}else{
+	$('#hour_show').html('<span class="fl"><em></em>'+Math.floor(hour/10)+'</span><span class="fr">'+hour%10+'<em></em></span>');
+	$(".tc-hour").html(hour+"时");
+};
+if (minite<10) {
+	$('#minute_show').html('<span class="fl">0<em></em></span><span class="fr">'+minite+'<em></em></span>');
+	$(".tc-minite").html("0"+minite+"分");
+}else{
+	$('#minute_show').html('<span class="fl"><em></em>'+Math.floor(minite/10)+'</span><span class="fr">'+minite%10+'<em></em></span>');
+	$(".tc-minite").html(minite+"分");
+};
+if (second<10) {
+	$('#second_show').html('<span class="fl">0<em></em></span><span class="fr">'+second+'<em></em></span>');
+	$(".tc-second").html("0"+second+"秒");
+}else{
+	$('#second_show').html('<span class="fl"><em></em>'+Math.floor(second/10)+'</span><span class="fr">'+second%10+'<em></em></span>');
+	$(".tc-second").html(second+"秒");
+};
+}
+else{
+$('#day_show').html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+$("#hour_show").html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+$("#minute_show").html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+$("#second_show").html('<span class="fl">0<em></em></span><span class="fr">0<em></em></span>');
+	$(".tc-day").html("0"+day);
+	$(".tc-day").html("0"+hour);
+	$(".tc-day").html("0"+minite);
+	$(".tc-day").html("0"+second);
+}
+setTimeout("updateEndTime()",1000);
+}
+//悬浮倒计时
+$(window).scroll(function(){
+	if ($(window).scrollTop()>=$(".floor-con").offset().top) {
+		// $(".tcxf").fadeIn(100);
+		$(".tcxf").slideDown(100);
+	}else{
+		$(".tcxf").hide();
+	};
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/index.css">
+	<title>登陆</title>
+</head>
+<body class="bgf">
+<!-- land-top -->
+<div class="land-top w1000 clearfix">
+	<div class="land-logo fl"><img src="images/logo.jpg" alt=""></div>
+	<h1 class="land-name fl">百瑞在线开盘系统</h1>
+</div>
+<!-- /land-top -->
+<!-- land-main -->
+<div class="land-main">
+	<div class="w1000 rel auto">
+		<div class="land-frame">
+			<form action="">
+				<h2 class="tc">登录抢购</h2>
+				<div class="land-inp clearfix"><label>号码：</label><input type="text" value="请输入认筹的电话号码" onblur="if(this.value=='') this.value='请输入认筹的电话号码'" onClick="if(this.value=='请输入认筹的电话号码')this.value=''" /></div>
+				<div class="land-inp mt30 clearfix"><label>密码：</label><input type="text" value="发送到手机的密码" onblur="if(this.value=='') this.value='发送到手机的密码'" onClick="if(this.value=='发送到手机的密码')this.value=''"></div>
+				<div class="land-a mt15 clearfix">
+					<a href="" class="fl">在线认筹</a>
+					<a href="" class="fr">忘记密码</a>
+				</div>
+				<div class="mt40">
+					<input id="Btn_login" class="land-btn btn" type="Submit" value="登录">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- /land-main -->
+<!-- land-footer -->
+<div class="land-footer pb50 tc"><p class="c-999 f14">Copyright @ 2016 Berui.com</p></div>
+<!-- /land-footer -->
+<script src="js/jquery.min.js"></script>
+<script>
+$(function() {
+	//登陆点击回车 实现登陆
+	$("#Btn_login").click(function() {alert("asd");	});
+	$("body").keydown(function() {
+             if (event.keyCode == "13") {//keyCode=13是回车键
+                 $('#Btn_login').click();
+             }
+         });
+});
+</script>
+</body>
+</html>
